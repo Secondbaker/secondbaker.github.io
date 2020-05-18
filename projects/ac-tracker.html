@@ -48,15 +48,26 @@
 								<li>Work on a project with my wife</li>
 							</ul>
 							<hr>
+							<h2>What I Learned</h2>
+							<p>It's important to keep in mind that I started this with no knowledge of Ruby, Rails, or jQuery.  As such, this is not a complete list - that would just be rewriting every line of code from the project.  But to summarize, here are some important things I got to learn through this project:</p>
+							<ul>
+								<li>ActiveRecord association, including polymorphic relationships</li>
+								<li>Installing and running Rails applications on Heroku</li>
+								<li>Postgresql, including datatypes such as hstore and jsonb</li>
+								<li>Ruby methods, classes, modules, and syntax - I find the ufo operator <=> to be especially fun</li>
+								<li>Basic jQuery, including ajax (although ajax wasn't required for the final implementation because I figured out a more Railsy way to handle it)</li>
+								<li>Some HTML and CSS things, since I needed to set attributes on HTML elements for certain behaviors to work</li>
+								<li>User Authentication with Auth0</li>
+							</ul>
+							<hr>
 							<h2>Project Shortcomings and Obstacles</h2>
 							<p>The primary problem on this project (so far) was a good one; a lot of times while researching on how to build a new component, I would come across a better way of designing a prior component.  Maybe this isn't ideal for a product, but this app is a learning project, so I consider it to be positive when this happens.  Additionally, that helped me both in practicing version control (especially branching) and refactoring, which is part of the lifecycle of a lot of products.  I am now confident that given a Rails codebase, I could implement a change to it without breaking anything, which feels good.</p>
 							<p>However, the project does have flaws.  At the current time, I think that there are too many rows in the database for the amount of data actually recorded.  This is because of an inefficient design choice made before I fully understood how to implement polymorphic relationships between objects in Rails.  I would say that CollectibleAttributes, as a model, are unnecessary and can be removed from the project entirely.  This would reduce rows in the database by close to half, assuming zero users.  With a large number of users, the change from fixing this would be small in comparison to all the users' data.</p>
 							<p>The greatest flaws with this project are in the front end code I wrote.  Even though I have never used Rails or Ruby, I know what kinds of things I <em>should</em> be able to do with them because of prior experience with database software (mysql) and object-oriented programming languages (Java, C#).  However, there were certain components that I knew should act a certain way on the client side.  For these behaviors, I ended up using jQuery, and by far this is the weakest area in the project.</p>
 							<p>I decided that jQuery would be the way to go because I could fit it in to the project better - my alternative would have been React.  I have worked with React connected through APIs to the back end, and this wouldn't have been impossible by any means for this project.  However, I wanted to see as much of Rails as I could, so I wanted to use it for the model, controller, <i>and</i> views.</p>
 							<p>The jQuery I used does what it should, but the placement is the main problem.  I didn't figure out how to make it work properly in a separate file; apparently this has changed from Rails 5 to Rails 6 and I didn't understand what needed to be done.</p>
-							<hr>
-							<h2>What I Learned</h2>
-							<p></p>
+							<p>Finally, there are some features that I have prepared for with the back end code, such as having custom collections and sharing collections between users, that I have yet to be able to implement because I need more front end knowledge to make them work the way I feel they should.</p>
+
 						</div>
 					</section>
 
