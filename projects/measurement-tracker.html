@@ -34,9 +34,11 @@
 							<h1 class="major">Measurement Tracker</h1>
 							<span class="image fit"><img src="/images/measurement-tracker.png" alt="" /></span>
 							<ul class="actions">
-								<li><a href="https://measurement-tracker.herokuapp.com" class="button">Live site</a></li>
+								<li><a href="https://youtu.be/O1yxYI9NepY" class="button">Demo video</a></li>
+								<li><a href="https://measurement-tracker.herokuapp.com" class="button">Live site*</a></li>
 								<li><a href="https://github.com/Secondbaker/weight-tracker" class="button">GitHub Repo</a></li>
 							</ul>
+							<i style="font-size: 12px">*The live site is on a free <a href="https://heroku.com">Heroku</a> dyno, so the server goes to sleep after 15 minutes of inactivity.  Please be patient with it; it's fast once it gets started =)</i>
 							<h2>Background</h2>
 							<p>I wanted a way to easily keep track of my measurements.  I considered making a Google form and adding it to my phone's home screen and using a complicated Google Sheets formula to automatically graph new data and average things out, but I decided against that.  This app allows me to enter data whenever and as often as I would like and automatically graphs it and shows me average values so I can get a better feel for the data trend at any given time.  What's more, I have some friends who were interested in tracking their measurements as well, so I used Devise authentication to allow multiple users to have separate data.</p>
 							<hr>
@@ -58,7 +60,7 @@
 							</ul>
 							<hr>
 							<h2>Project Shortcomings and Obstacles</h2>
-							<p>This project has been easier than the <a href="/projects/ac-tracker/">Animal Crossing Tracker</a>.  I was less ambitious with the features, so that makes sense.  However, I did solve some problems in this project that I could not solve in the other.</p>
+							<p>This project has been easier than the <a href="/projects/ac-tracker.html">Animal Crossing Tracker</a>.  I was less ambitious with the features, so that makes sense.  However, I did solve some problems in this project that I could not solve in the other.</p>
 							<p>First is updating single or multiple ActiveRecord objects from a single form.  Maybe I've spent too much time on the internet and now I can see the code or something, but when designing the data input page, I could feel how it should work.  The user should be able to enter data into any of their trackers and then submit it all with one button press.  By default in Rails, one would expect to go to a page for each tracker, create a new data point, enter a value, and then repeat.  But I really needed this to be simple.</p>
 							<p>It did take a little while to figure out, but I eventually got it working.  Another problem I ran into I was less patient with.  The first CSS framework I used was <a href="https://milligram.io">Milligram</a>, which is beautiful and effective and not what I wanted <i>exactly</i> so I stopped using it.  After looking around, it seemed like <a href="https://tailwindcss.com">Tailwind CSS</a> was favored by the Rails crowd.  However, I had never done any responsive CSS, so I ended up getting the site's features working long before I got its design working.</p>
 							<p>At first I didn't understand how Tailwind was supposed to work, since it seemed very much unlike CSS I had done prior.  Now I have got the hang of it more, but I haven't gone back and made the design work well on most devices.</p>
