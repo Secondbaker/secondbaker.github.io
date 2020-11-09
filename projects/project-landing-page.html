@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Lab: Measurment Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/index.html" class="title">Lab</a>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/index.html#one">Current Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Measurement Tracker</h1>
+                <span class="image fit"><img src="/images/measurement-tracker.png" alt="" /></span>
+                <ul class="actions">
+                    <li><a href="https://youtu.be/O1yxYI9NepY" class="button">Demo video</a></li>
+                    <li><a href="https://measurement-tracker.herokuapp.com" class="button">Live site*</a></li>
+                    <li><a href="https://github.com/Secondbaker/weight-tracker" class="button">GitHub Repo</a></li>
+                </ul>
+                <i style="font-size: 12px">*The live site is on a free <a href="https://heroku.com">Heroku</a> dyno, so
+                    the server goes to sleep after 15 minutes of inactivity. Please be patient with it; it's fast once
+                    it gets started =)</i>
+                <h2>Background</h2>
+                <p>I wanted a way to easily keep track of my measurements. I considered making a Google form and adding
+                    it to my phone's home screen and using a complicated Google Sheets formula to automatically graph
+                    new data and average things out, but I decided against that. This app allows me to enter data
+                    whenever and as often as I would like and automatically graphs it and shows me average values so I
+                    can get a better feel for the data trend at any given time. What's more, I have some friends who
+                    were interested in tracking their measurements as well, so I used Devise authentication to allow
+                    multiple users to have separate data.</p>
+                <hr>
+                <h2>Project Objectives</h2>
+                <ul>
+                    <li>Learn authentication with <a href="https://github.com/heartcombo/devise">Devise</a></li>
+                    <li>Learn how to update multiple models at once in Rails</li>
+                    <li>Find some good Ruby gems</li>
+                    <li>Use a CSS framework</li>
+                </ul>
+                <hr>
+                <h2>What I Learned</h2>
+                <p>This was only my second Rails project, but I wanted to be able to use it as soon as possible, so I
+                    tried to stay within what I knew I could do while also making a UX that felt right to me.</p>
+                <ul>
+                    <li>The gems <a href="https://github.com/ankane/chartkick">chartkick</a> and <a
+                            href="https://github.com/mhuggins/ruby-measurement">ruby-measurement</a>. I may add a
+                        feature to ruby-measurement to group measurements and not display the whole list</li>
+                    <li>Authentication using <a href="https://github.com/heartcombo/devise">Devise</a>. It seems to be
+                        the go-to option for Rails, and after this I think that is because of its customizability. There
+                        is still plenty for me to learn about it if I want, even though I have a basic grasp of it now
+                    </li>
+                    <li><a href="https://milligram.io">Milligram</a> (though I didn't use it for the final release)</li>
+                    <li><a href="https://tailwindcss.com/">Tailwind CSS</a> (but there is still a lot of work to do
+                        there before it looks good on most devices)</li>
+                </ul>
+                <hr>
+                <h2>Project Shortcomings and Obstacles</h2>
+                <p>This project has been easier than the <a href="/projects/ac-tracker.html">Animal Crossing
+                        Tracker</a>. I was less ambitious with the features, so that makes sense. However, I did solve
+                    some problems in this project that I could not solve in the other.</p>
+                <p>First is updating single or multiple ActiveRecord objects from a single form. Maybe I've spent too
+                    much time on the internet and now I can see the code or something, but when designing the data input
+                    page, I could feel how it should work. The user should be able to enter data into any of their
+                    trackers and then submit it all with one button press. By default in Rails, one would expect to go
+                    to a page for each tracker, create a new data point, enter a value, and then repeat. But I really
+                    needed this to be simple.</p>
+                <p>It did take a little while to figure out, but I eventually got it working. Another problem I ran into
+                    I was less patient with. The first CSS framework I used was <a
+                        href="https://milligram.io">Milligram</a>, which is beautiful and effective and not what I
+                    wanted <i>exactly</i> so I stopped using it. After looking around, it seemed like <a
+                        href="https://tailwindcss.com">Tailwind CSS</a> was favored by the Rails crowd. However, I had
+                    never done any responsive CSS, so I ended up getting the site's features working long before I got
+                    its design working.</p>
+                <p>At first I didn't understand how Tailwind was supposed to work, since it seemed very much unlike CSS
+                    I had done prior. Now I have got the hang of it more, but I haven't gone back and made the design
+                    work well on most devices.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Austin Baker. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
