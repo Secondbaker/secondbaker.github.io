@@ -13,3 +13,7 @@
 .container {
   padding: 2px 16px;
 }
+
+.content {
+  max-width: 100px;
+}
